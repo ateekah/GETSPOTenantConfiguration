@@ -44,13 +44,12 @@ Get-SPOSite -Limit All| select url, @{label="Size in MB";Expression={$_.usage.st
 # Gets SPOsite
 Write-Host "Get-SPOSite"
 "Get-SPOSite" | Out-File -FilePath c:\temp\spotenantconfig.txt -append
-Get-SPOSite | select url, Title, template >> c:\temp\spotenantconfig.txt
-
+Get-SPOSite -Limit All | select url, Title, template >> c:\temp\spotenantconfig.txt
 
 # Get sites with O365 Group
 Write-Host "Get-SPOSite with Group Template"
 "Get-SPOSite with Group Template" | Out-File -FilePath c:\temp\spotenantconfig.txt -append
-Get-SPOSite | select url, Title, template | where { $_.Template -eq "GROUP#0"} >> c:\temp\spotenantconfig.txt
+Get-SPOSite -Limit All | select url, Title, template | where { $_.Template -eq "GROUP#0"} >> c:\temp\spotenantconfig.txt
 
 
 # Gets SPOUser
