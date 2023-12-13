@@ -3,8 +3,8 @@
 Import-Module Microsoft.Online.Sharepoint.PowerShell -DisableNameChecking
 
 #Variables for SharePoint Online Admin & Target site collection
-$AdminSiteURL="https://microsoft311dev-admin.sharepoint.com/"
-$SiteCollURL="https://microsoft311dev.sharepoint.com/"
+$AdminSiteURL="https://Yourtenantname-admin.sharepoint.com/"
+$SiteCollURL="https://Yourtenantname.sharepoint.com/"
 
 #Get the Credentials
 $Credential = Get-credential
