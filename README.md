@@ -13,7 +13,7 @@ $SaveExecutionPolicy = Get-ExecutionPolicy
 Set-ExecutionPolicy RemoteSigned -Scope Currentuser
 
 #Connect to SPO
-Connect-SPOService -Url https://yourtenant.sharepoint.com -credential yourglobaladmin@yourtenant.onmicrosoft.com
+Connect-SPOService -Url https://yourtenant-admin.sharepoint.com -credential yourglobaladmin@yourtenant.onmicrosoft.com
 
 # View all of the other SPO management shell cmdlets by running the #following 
 #get-help *SPO* | where modulename –eq #microsoft.online.sharepoint.powershell
